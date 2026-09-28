@@ -1,5 +1,13 @@
 # Changelog
 
+## v0.1.1 (2026-09-28)
+
+Wording fixes only. The numbers and data files are unchanged. Only the release bundle name changes.
+
+- kanana-1.5-2.1b-instruct per-token result is now stated with its interval: no detectable difference (95% CIs 0.84–1.14), not "no difference". Up to about +14% per token is not ruled out.
+- FLORES-101 source is described precisely: Wikinews, Wikijunior and Wikivoyage sentences, not "Wikipedia-style".
+- Release asset: `koqloss-data-v0.1.1.json` and its `.sha256`.
+
 ## v0.1.0 (2026-09-28)
 
 First public results, measured 2026-09-27.

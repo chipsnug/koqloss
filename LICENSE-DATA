@@ -7,7 +7,7 @@ International License (CC BY 4.0), except as noted below.
   https://creativecommons.org/licenses/by/4.0/
   Full legal code: https://creativecommons.org/licenses/by/4.0/legalcode
 
-Attribution: "Chipsnug koqloss v0.1.0, https://github.com/chipsnug/koqloss"
+Attribution: "Chipsnug koqloss v0.1.1, https://github.com/chipsnug/koqloss"
 
 Exception: the fields of data/inputs.json under "q1_kl_document" (sentence
 IDs, document hashes and byte counts, and the rule for building the document)

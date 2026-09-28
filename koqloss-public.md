@@ -1,4 +1,4 @@
-# How much more does quantization cost Korean? (koqloss v0.1.0)
+# How much more does quantization cost Korean? (koqloss v0.1.1)
 
 Measured 2026-09-27 by Chipsnug. Three open models, three GGUF levels each (Q8_0, Q4_K_M, Q3_K_M), on one Apple M4 Pro (24 GB, Metal) with llama.cpp 0.5.0 (build 11146, commit `7fe450e19`). All numbers are relative to **Q8_0**, not to the original BF16 weights.
 
@@ -7,7 +7,7 @@ Measured 2026-09-27 by Chipsnug. Three open models, three GGUF levels each (Q8_0
 ## Headline
 
 1. **Loss a user sees.** For the same content, a Korean document loses **1.47–3.45×** more information than the English one under quantization. This holds for all 6 model × level combinations, and no 95% interval includes 1.0.
-2. **Per-token sensitivity depends on the model.** kanana-1.5-2.1b-instruct shows none (0.96–1.01×, intervals include 1.0). Its Korean gap comes from the tokenizer splitting Korean into 1.53× more tokens. Qwen3 adds 1.42–2.04× per token on top of 1.69× more tokens.
+2. **Per-token sensitivity depends on the model.** kanana-1.5-2.1b-instruct shows no detectable per-token difference (0.96–1.01×; 95% CIs 0.84–1.14 include 1.0, so up to about +14% per token is not ruled out). Within this precision, its Korean gap is explained by the tokenizer splitting Korean into 1.53× more tokens. Qwen3 adds 1.42–2.04× per token on top of 1.69× more tokens.
 3. So "quantization hurts Korean more" is **not** true for every model. The explanation that a Korean-focused tokenizer and training remove the per-token gap is a hypothesis: we only tested two model families.
 
 ## Models
@@ -81,7 +81,7 @@ Q4_K_M generates fastest for all three models. Q3_K_M files are smaller but gene
 
 - One device, one session, one run. Speed was not controlled for temperature or background load. Max RSS is macOS `time -l`, and we did not check whether it counts all unified memory used by Metal.
 - The reference is Q8_0, not BF16. Loss against the original weights is larger. If Q8_0 itself loses differently by language, the ratios can be biased.
-- Q1 uses 300 Wikipedia-style sentences. Other domains may give different ratios. The chunk bootstrap (15–27 chunks) can make intervals slightly narrow, but the lowest Qwen3 per-token bound (1.26) leaves room.
+- Q1 uses 300 sentences from Wikinews, Wikijunior and Wikivoyage (FLORES-101). Other domains may give different ratios. The chunk bootstrap (15–27 chunks) can make intervals slightly narrow, but the lowest Qwen3 per-token bound (1.26) leaves room.
 - Q2 has 300 items and no multiple-comparison correction across 6 combinations. Letter-choice scoring is not the same as the quality of generated answers.
 - Automatic metrics (KL, multiple choice) can understate what people notice. Results do not transfer to other chips, NPUs or models.
 
@@ -100,14 +100,14 @@ No model weights, no logits and no FLORES-101 text are included.
 
 ## 한국어
 
-# 양자화하면 한국어는 얼마나 더 잃는가 (koqloss v0.1.0)
+# 양자화하면 한국어는 얼마나 더 잃는가 (koqloss v0.1.1)
 
 2026-09-27에 Chipsnug가 측정했다. 공개 모델 3개를 각각 GGUF 3수준(Q8_0·Q4_K_M·Q3_K_M)으로 쟀다. 기기는 Apple M4 Pro(24GB, Metal) 1대이고, llama.cpp는 0.5.0(build 11146, commit `7fe450e19`)이다. 모든 값은 원본 BF16이 아니라 **Q8_0 대비**다.
 
 ## 요약
 
 1. **사용자가 겪는 손실.** 같은 내용이면 한국어 문서가 양자화로 잃는 정보가 영어보다 **1.47~3.45배** 크다. 모델·수준 6조합 모두 그렇고, 95% 구간이 1.0을 포함한 조합은 없다.
-2. **토큰 하나당 민감도는 모델마다 다르다.** kanana-1.5-2.1b-instruct는 차이가 없다(0.96~1.01배, 구간이 1.0 포함). kanana의 한국어 격차는 토크나이저가 한국어를 1.53배 더 많은 토큰으로 쪼개기 때문이다. Qwen3은 토큰이 1.69배 많은 데다 토큰당으로도 1.42~2.04배를 더 잃는다.
+2. **토큰 하나당 민감도는 모델마다 다르다.** kanana-1.5-2.1b-instruct는 검출할 만한 차이가 없다(0.96~1.01배, 95% 구간 0.84~1.14가 1.0을 포함한다. 토큰당 최대 약 +14%까지는 배제하지 못한다). 이 정밀도 안에서 kanana의 한국어 격차는 토크나이저가 한국어를 1.53배 더 많은 토큰으로 쪼개는 것으로 설명된다. Qwen3은 토큰이 1.69배 많은 데다 토큰당으로도 1.42~2.04배를 더 잃는다.
 3. 그래서 "양자화가 한국어에 더 해롭다"는 모든 모델에 맞는 말이 **아니다**. "한국어 중심 토크나이저·학습이 토큰당 격차를 없앤다"는 설명은 가설이다. 모델군을 둘만 쟀다.
 
 ## 모델
@@ -164,7 +164,7 @@ No model weights, no logits and no FLORES-101 text are included.
 
 - 기기 1대에서 한 번만 측정했다. 속도는 온도·부하를 통제하지 않았다.
 - 기준이 BF16이 아니라 Q8_0이다. 원본 대비 손실은 이보다 크다.
-- Q1은 위키 계열 300문장뿐이다. 분야가 바뀌면 비가 달라질 수 있다.
+- Q1은 FLORES-101의 Wikinews·Wikijunior·Wikivoyage 300문장뿐이다. 분야가 바뀌면 비가 달라질 수 있다.
 - Q2는 300문항이고, 6조합을 다중 비교 보정 없이 본다. 글자 선택 채점이라 생성 답변의 품질과는 다르다.
 - 자동 지표는 사람이 느끼는 손실보다 작게 잡을 수 있다. 다른 칩·NPU·모델로 일반화할 수 없다.
 

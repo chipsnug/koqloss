@@ -1,0 +1,7 @@
+model,quant,doc_ratio_ko_en,doc_ratio_ci95_lo,doc_ratio_ci95_hi,token_count_ratio,per_token_ratio,per_token_ci95_lo,per_token_ci95_hi,per_byte_ratio,mean_kld_ko,mean_kld_en,tokens_ko,tokens_en,scored_tokens_ko,scored_tokens_en,chunks_ko,chunks_en,ci_method
+kakaocorp/kanana-1.5-2.1b-instruct-2505,Q4_K_M,1.5419,1.3665,1.7426,1.5297,1.008,0.8933,1.1391,1.273,0.041923,0.041592,12351,8074,6120,3825,24,15,chunk-bootstrap
+kakaocorp/kanana-1.5-2.1b-instruct-2505,Q3_K_M,1.467,1.2805,1.6825,1.5297,0.959,0.8371,1.0999,1.2111,0.153059,0.159605,12351,8074,6120,3825,24,15,chunk-bootstrap
+Qwen/Qwen3-1.7B,Q4_K_M,2.9256,2.5455,3.3904,1.6891,1.732,1.507,2.0072,2.4153,0.073485,0.042428,13949,8258,6885,4080,27,16,chunk-bootstrap
+Qwen/Qwen3-1.7B,Q3_K_M,3.4471,3.0673,3.8905,1.6891,2.0407,1.8159,2.3032,2.8458,0.263069,0.12891,13949,8258,6885,4080,27,16,chunk-bootstrap
+Qwen/Qwen3-4B,Q4_K_M,2.4009,2.1251,2.6779,1.6891,1.4213,1.2581,1.5854,1.9821,0.052773,0.037129,13949,8258,6885,4080,27,16,chunk-bootstrap
+Qwen/Qwen3-4B,Q3_K_M,2.7549,2.4427,3.1173,1.6891,1.6309,1.4461,1.8455,2.2744,0.193427,0.118598,13949,8258,6885,4080,27,16,chunk-bootstrap

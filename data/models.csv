@@ -1,0 +1,10 @@
+model,gguf_repo,uploader,quant,file,bytes,sha256,base_license,gated
+kakaocorp/kanana-1.5-2.1b-instruct-2505,DevQuasar/kakaocorp.kanana-1.5-2.1b-instruct-2505-GGUF,DevQuasar,Q8_0,kakaocorp.kanana-1.5-2.1b-instruct-2505.Q8_0.gguf,2469819008,abd99d00181c2418ca1f3144527d490820ef504918271def06073eadc8980bbe,apache-2.0,false
+kakaocorp/kanana-1.5-2.1b-instruct-2505,DevQuasar/kakaocorp.kanana-1.5-2.1b-instruct-2505-GGUF,DevQuasar,Q4_K_M,kakaocorp.kanana-1.5-2.1b-instruct-2505.Q4_K_M.gguf,1522796768,24d3db59d0af2c85c0afc0bbc99da1174b73ef6728bce2650bd91bec28ad1c81,apache-2.0,false
+kakaocorp/kanana-1.5-2.1b-instruct-2505,DevQuasar/kakaocorp.kanana-1.5-2.1b-instruct-2505-GGUF,DevQuasar,Q3_K_M,kakaocorp.kanana-1.5-2.1b-instruct-2505.Q3_K_M.gguf,1246236704,52da9e1838d5f685c06c98572a0df069f17882d9b88c705c8de9dd40634cbd23,apache-2.0,false
+Qwen/Qwen3-4B,bartowski/Qwen_Qwen3-4B-GGUF,bartowski,Q8_0,Qwen_Qwen3-4B-Q8_0.gguf,4280405440,4050871d20fa939e88e83b1a86060061bdeff01e0d9e5d000d374766f0caf7d7,apache-2.0,false
+Qwen/Qwen3-4B,bartowski/Qwen_Qwen3-4B-GGUF,bartowski,Q4_K_M,Qwen_Qwen3-4B-Q4_K_M.gguf,2497280960,fbe1d5edd4ce802ae3ae7c7e4ab7d09789d697fdac1fc7929f8df4ca3c41bae3,apache-2.0,false
+Qwen/Qwen3-4B,bartowski/Qwen_Qwen3-4B-GGUF,bartowski,Q3_K_M,Qwen_Qwen3-4B-Q3_K_M.gguf,2075618240,29183d72b1b4e9666287d82acb9aea189512c99cb3bf6d9c77c4a43ebcb30414,apache-2.0,false
+Qwen/Qwen3-1.7B,bartowski/Qwen_Qwen3-1.7B-GGUF,bartowski,Q8_0,Qwen_Qwen3-1.7B-Q8_0.gguf,2165039520,74bb7c53538ab2cc81b93f0c64da14a503159de68cff3c6770428d3850479db3,apache-2.0,false
+Qwen/Qwen3-1.7B,bartowski/Qwen_Qwen3-1.7B-GGUF,bartowski,Q4_K_M,Qwen_Qwen3-1.7B-Q4_K_M.gguf,1282439584,72c5c3cb38fa32d5256e2fe30d03e7a64c6c79e668ad84057e3bd66e250b24fb,apache-2.0,false
+Qwen/Qwen3-1.7B,bartowski/Qwen_Qwen3-1.7B-GGUF,bartowski,Q3_K_M,Qwen_Qwen3-1.7B-Q3_K_M.gguf,1073242528,d544d30dbb7b2f608775d69c939a9b8d89c45df2be1a5ad1390ddc1bd7f8d6f5,apache-2.0,false

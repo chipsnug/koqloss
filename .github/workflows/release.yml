@@ -1,0 +1,51 @@
+name: release
+on:
+  push:
+    tags: ["v*"]
+permissions:
+  contents: read
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803 # v6.1.0
+        with:
+          persist-credentials: false
+      - name: Verify data hashes
+        run: (cd data && sha256sum -c SHA256SUMS) && (cd dist && sha256sum -c koqloss-data-${GITHUB_REF_NAME}.json.sha256)
+      - name: Release notes for this tag
+        run: awk -v t="## $GITHUB_REF_NAME " 'index($0, t) == 1 {f = 1; next} /^## / {f = 0} f' CHANGELOG.md > "$RUNNER_TEMP/notes.md" && test -s "$RUNNER_TEMP/notes.md"
+      - name: Create release
+        run: gh release create "$GITHUB_REF_NAME" "dist/koqloss-data-${GITHUB_REF_NAME}.json" "dist/koqloss-data-${GITHUB_REF_NAME}.json.sha256" --title "$GITHUB_REF_NAME" --notes-file "$RUNNER_TEMP/notes.md" --verify-tag
+        env:
+          GH_TOKEN: ${{ github.token }}
+  hf:
+    needs: release
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    env:
+      HF_REPO: chipsnug/ko-quant-loss-v0
+    steps:
+      - uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803 # v6.1.0
+        with:
+          persist-credentials: false
+      - name: Stage dataset folder
+        run: |
+          mkdir -p "$RUNNER_TEMP/hf"
+          cp hf/README.md koqloss-public.md LICENSE-DATA THIRD_PARTY_NOTICES.md "$RUNNER_TEMP/hf/"
+          cp -R data "$RUNNER_TEMP/hf/data"
+          cd "$RUNNER_TEMP/hf/data" && sha256sum -c SHA256SUMS
+      - name: Install huggingface_hub
+        run: python3 -m venv "$RUNNER_TEMP/venv" && "$RUNNER_TEMP/venv/bin/pip" install --quiet "huggingface_hub==0.34.4"
+      - name: Upload to Hugging Face
+        env:
+          HF_TOKEN: ${{ secrets.HF_TOKEN }}
+        run: |
+          "$RUNNER_TEMP/venv/bin/python" - <<'PY'
+          import os
+          from huggingface_hub import upload_folder
+          upload_folder(repo_id=os.environ["HF_REPO"], repo_type="dataset", folder_path=os.path.join(os.environ["RUNNER_TEMP"], "hf"), commit_message="koqloss " + os.environ["GITHUB_REF_NAME"], token=os.environ["HF_TOKEN"])
+          PY

@@ -1,0 +1,490 @@
+{
+ "schema": "koqloss-summary/1",
+ "reference": "Q8_0",
+ "device": "Apple M4 Pro 24GB (macOS, Metal)",
+ "measured": "2026-09-27",
+ "llama": "version: 0.5.0 (build 11146, commit 7fe450e19)",
+ "doc": {
+  "sentences": 300,
+  "ids": [
+   1,
+   300
+  ],
+  "sha256": {
+   "ko": "59697c54071c1ad2e002f415f475a43b1faa7ca2757cc2999ebd78cd35d30248",
+   "en": "17bb8fb7266012c065f5e1c70f577b92bd4aac11e88015b69938276fdbf34c0d"
+  },
+  "bytes": {
+   "ko": 47385,
+   "en": 39120
+  }
+ },
+ "mcPairs": 300,
+ "halfWidth95At10pct": 0.048,
+ "mde80At10pct": 0.0686,
+ "kl": [
+  {
+   "model": "kakaocorp/kanana-1.5-2.1b-instruct-2505",
+   "quant": "Q4_K_M",
+   "meanKld": {
+    "ko": 0.041923,
+    "en": 0.041592
+   },
+   "meanKldUnc": {
+    "ko": 0.001081,
+    "en": 0.001053
+   },
+   "tokens": {
+    "ko": 12351,
+    "en": 8074
+   },
+   "scoredTokens": {
+    "ko": 6120,
+    "en": 3825
+   },
+   "chunks": {
+    "ko": 24,
+    "en": 15
+   },
+   "docRatio": 1.5419,
+   "ci": [
+    1.3665,
+    1.7426
+   ],
+   "ciMethod": "chunk-bootstrap",
+   "includesOne": false,
+   "tokenRatio": 1.5297,
+   "perTokenRatio": 1.008,
+   "perTokenCi": [
+    0.8933,
+    1.1391
+   ],
+   "perTokenAboveOne": false,
+   "perByteRatio": 1.273
+  },
+  {
+   "model": "kakaocorp/kanana-1.5-2.1b-instruct-2505",
+   "quant": "Q3_K_M",
+   "meanKld": {
+    "ko": 0.153059,
+    "en": 0.159605
+   },
+   "meanKldUnc": {
+    "ko": 0.003468,
+    "en": 0.004507
+   },
+   "tokens": {
+    "ko": 12351,
+    "en": 8074
+   },
+   "scoredTokens": {
+    "ko": 6120,
+    "en": 3825
+   },
+   "chunks": {
+    "ko": 24,
+    "en": 15
+   },
+   "docRatio": 1.467,
+   "ci": [
+    1.2805,
+    1.6825
+   ],
+   "ciMethod": "chunk-bootstrap",
+   "includesOne": false,
+   "tokenRatio": 1.5297,
+   "perTokenRatio": 0.959,
+   "perTokenCi": [
+    0.8371,
+    1.0999
+   ],
+   "perTokenAboveOne": false,
+   "perByteRatio": 1.2111
+  },
+  {
+   "model": "Qwen/Qwen3-1.7B",
+   "quant": "Q4_K_M",
+   "meanKld": {
+    "ko": 0.073485,
+    "en": 0.042428
+   },
+   "meanKldUnc": {
+    "ko": 0.001863,
+    "en": 0.0026
+   },
+   "tokens": {
+    "ko": 13949,
+    "en": 8258
+   },
+   "scoredTokens": {
+    "ko": 6885,
+    "en": 4080
+   },
+   "chunks": {
+    "ko": 27,
+    "en": 16
+   },
+   "docRatio": 2.9256,
+   "ci": [
+    2.5455,
+    3.3904
+   ],
+   "ciMethod": "chunk-bootstrap",
+   "includesOne": false,
+   "tokenRatio": 1.6891,
+   "perTokenRatio": 1.732,
+   "perTokenCi": [
+    1.507,
+    2.0072
+   ],
+   "perTokenAboveOne": true,
+   "perByteRatio": 2.4153
+  },
+  {
+   "model": "Qwen/Qwen3-1.7B",
+   "quant": "Q3_K_M",
+   "meanKld": {
+    "ko": 0.263069,
+    "en": 0.12891
+   },
+   "meanKldUnc": {
+    "ko": 0.005523,
+    "en": 0.004599
+   },
+   "tokens": {
+    "ko": 13949,
+    "en": 8258
+   },
+   "scoredTokens": {
+    "ko": 6885,
+    "en": 4080
+   },
+   "chunks": {
+    "ko": 27,
+    "en": 16
+   },
+   "docRatio": 3.4471,
+   "ci": [
+    3.0673,
+    3.8905
+   ],
+   "ciMethod": "chunk-bootstrap",
+   "includesOne": false,
+   "tokenRatio": 1.6891,
+   "perTokenRatio": 2.0407,
+   "perTokenCi": [
+    1.8159,
+    2.3032
+   ],
+   "perTokenAboveOne": true,
+   "perByteRatio": 2.8458
+  },
+  {
+   "model": "Qwen/Qwen3-4B",
+   "quant": "Q4_K_M",
+   "meanKld": {
+    "ko": 0.052773,
+    "en": 0.037129
+   },
+   "meanKldUnc": {
+    "ko": 0.001675,
+    "en": 0.001473
+   },
+   "tokens": {
+    "ko": 13949,
+    "en": 8258
+   },
+   "scoredTokens": {
+    "ko": 6885,
+    "en": 4080
+   },
+   "chunks": {
+    "ko": 27,
+    "en": 16
+   },
+   "docRatio": 2.4009,
+   "ci": [
+    2.1251,
+    2.6779
+   ],
+   "ciMethod": "chunk-bootstrap",
+   "includesOne": false,
+   "tokenRatio": 1.6891,
+   "perTokenRatio": 1.4213,
+   "perTokenCi": [
+    1.2581,
+    1.5854
+   ],
+   "perTokenAboveOne": true,
+   "perByteRatio": 1.9821
+  },
+  {
+   "model": "Qwen/Qwen3-4B",
+   "quant": "Q3_K_M",
+   "meanKld": {
+    "ko": 0.193427,
+    "en": 0.118598
+   },
+   "meanKldUnc": {
+    "ko": 0.00429,
+    "en": 0.00437
+   },
+   "tokens": {
+    "ko": 13949,
+    "en": 8258
+   },
+   "scoredTokens": {
+    "ko": 6885,
+    "en": 4080
+   },
+   "chunks": {
+    "ko": 27,
+    "en": 16
+   },
+   "docRatio": 2.7549,
+   "ci": [
+    2.4427,
+    3.1173
+   ],
+   "ciMethod": "chunk-bootstrap",
+   "includesOne": false,
+   "tokenRatio": 1.6891,
+   "perTokenRatio": 1.6309,
+   "perTokenCi": [
+    1.4461,
+    1.8455
+   ],
+   "perTokenAboveOne": true,
+   "perByteRatio": 2.2744
+  }
+ ],
+ "mc": [
+  {
+   "model": "kakaocorp/kanana-1.5-2.1b-instruct-2505",
+   "quant": "Q4_K_M",
+   "q8Accuracy": {
+    "ko": 0.4766666666666667,
+    "en": 0.5133333333333333
+   },
+   "accuracy": {
+    "ko": 0.44333333333333336,
+    "en": 0.5033333333333333
+   },
+   "flip": {
+    "ko": 0.1258741258741259,
+    "en": 0.09090909090909091
+   },
+   "netDrop": {
+    "ko": 0.03333333333333333,
+    "en": 0.01
+   },
+   "flipDiff": {
+    "mean": 0.035,
+    "lo": -0.0331,
+    "hi": 0.0997
+   },
+   "excluded": false,
+   "includesZero": true
+  },
+  {
+   "model": "kakaocorp/kanana-1.5-2.1b-instruct-2505",
+   "quant": "Q3_K_M",
+   "q8Accuracy": {
+    "ko": 0.4766666666666667,
+    "en": 0.5133333333333333
+   },
+   "accuracy": {
+    "ko": 0.39,
+    "en": 0.46
+   },
+   "flip": {
+    "ko": 0.25874125874125875,
+    "en": 0.18831168831168832
+   },
+   "netDrop": {
+    "ko": 0.08666666666666667,
+    "en": 0.05333333333333334
+   },
+   "flipDiff": {
+    "mean": 0.0704,
+    "lo": -0.0257,
+    "hi": 0.1691
+   },
+   "excluded": false,
+   "includesZero": true
+  },
+  {
+   "model": "Qwen/Qwen3-1.7B",
+   "quant": "Q4_K_M",
+   "q8Accuracy": {
+    "ko": 0.47,
+    "en": 0.5366666666666666
+   },
+   "accuracy": {
+    "ko": 0.44666666666666666,
+    "en": 0.5733333333333334
+   },
+   "flip": {
+    "ko": 0.18439716312056736,
+    "en": 0.043478260869565216
+   },
+   "netDrop": {
+    "ko": 0.023333333333333334,
+    "en": -0.03666666666666667
+   },
+   "flipDiff": {
+    "mean": 0.1409,
+    "lo": 0.075,
+    "hi": 0.2118
+   },
+   "excluded": false,
+   "includesZero": false
+  },
+  {
+   "model": "Qwen/Qwen3-1.7B",
+   "quant": "Q3_K_M",
+   "q8Accuracy": {
+    "ko": 0.47,
+    "en": 0.5366666666666666
+   },
+   "accuracy": {
+    "ko": 0.3933333333333333,
+    "en": 0.5633333333333334
+   },
+   "flip": {
+    "ko": 0.3404255319148936,
+    "en": 0.15527950310559005
+   },
+   "netDrop": {
+    "ko": 0.07666666666666666,
+    "en": -0.02666666666666667
+   },
+   "flipDiff": {
+    "mean": 0.1851,
+    "lo": 0.0973,
+    "hi": 0.2736
+   },
+   "excluded": false,
+   "includesZero": false
+  },
+  {
+   "model": "Qwen/Qwen3-4B",
+   "quant": "Q4_K_M",
+   "q8Accuracy": {
+    "ko": 0.5666666666666667,
+    "en": 0.6933333333333334
+   },
+   "accuracy": {
+    "ko": 0.5433333333333333,
+    "en": 0.7033333333333334
+   },
+   "flip": {
+    "ko": 0.1,
+    "en": 0.07211538461538461
+   },
+   "netDrop": {
+    "ko": 0.023333333333333334,
+    "en": -0.01
+   },
+   "flipDiff": {
+    "mean": 0.0279,
+    "lo": -0.0302,
+    "hi": 0.0811
+   },
+   "excluded": false,
+   "includesZero": true
+  },
+  {
+   "model": "Qwen/Qwen3-4B",
+   "quant": "Q3_K_M",
+   "q8Accuracy": {
+    "ko": 0.5666666666666667,
+    "en": 0.6933333333333334
+   },
+   "accuracy": {
+    "ko": 0.5333333333333333,
+    "en": 0.66
+   },
+   "flip": {
+    "ko": 0.17647058823529413,
+    "en": 0.125
+   },
+   "netDrop": {
+    "ko": 0.03333333333333333,
+    "en": 0.03333333333333333
+   },
+   "flipDiff": {
+    "mean": 0.0515,
+    "lo": -0.0174,
+    "hi": 0.1196
+   },
+   "excluded": false,
+   "includesZero": true
+  }
+ ],
+ "speed": [
+  {
+   "model": "kakaocorp/kanana-1.5-2.1b-instruct-2505",
+   "quant": "Q8_0",
+   "ppTps": 1572.6149,
+   "tgTps": 90.6779,
+   "benchMaxRssGB": 2.6987
+  },
+  {
+   "model": "kakaocorp/kanana-1.5-2.1b-instruct-2505",
+   "quant": "Q4_K_M",
+   "ppTps": 1541.5868,
+   "tgTps": 123.8657,
+   "benchMaxRssGB": 1.7546
+  },
+  {
+   "model": "kakaocorp/kanana-1.5-2.1b-instruct-2505",
+   "quant": "Q3_K_M",
+   "ppTps": 1444.5847,
+   "tgTps": 95.9163,
+   "benchMaxRssGB": 1.4631
+  },
+  {
+   "model": "Qwen/Qwen3-1.7B",
+   "quant": "Q8_0",
+   "ppTps": 2160.0624,
+   "tgTps": 109.0589,
+   "benchMaxRssGB": 2.3647
+  },
+  {
+   "model": "Qwen/Qwen3-1.7B",
+   "quant": "Q4_K_M",
+   "ppTps": 2028.9776,
+   "tgTps": 153.6875,
+   "benchMaxRssGB": 1.4756
+  },
+  {
+   "model": "Qwen/Qwen3-1.7B",
+   "quant": "Q3_K_M",
+   "ppTps": 1975.3123,
+   "tgTps": 123.7645,
+   "benchMaxRssGB": 1.2807
+  },
+  {
+   "model": "Qwen/Qwen3-4B",
+   "quant": "Q8_0",
+   "ppTps": 758.9896,
+   "tgTps": 49.9797,
+   "benchMaxRssGB": 4.497
+  },
+  {
+   "model": "Qwen/Qwen3-4B",
+   "quant": "Q4_K_M",
+   "ppTps": 544.4883,
+   "tgTps": 72.9602,
+   "benchMaxRssGB": 2.7277
+  },
+  {
+   "model": "Qwen/Qwen3-4B",
+   "quant": "Q3_K_M",
+   "ppTps": 735.7886,
+   "tgTps": 56.2762,
+   "benchMaxRssGB": 2.3052
+  }
+ ]
+}

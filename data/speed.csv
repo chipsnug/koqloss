@@ -1,0 +1,10 @@
+model,quant,prompt_tokens_per_s,gen_tokens_per_s,bench_max_rss_gb
+kakaocorp/kanana-1.5-2.1b-instruct-2505,Q8_0,1572.6149,90.6779,2.6987
+kakaocorp/kanana-1.5-2.1b-instruct-2505,Q4_K_M,1541.5868,123.8657,1.7546
+kakaocorp/kanana-1.5-2.1b-instruct-2505,Q3_K_M,1444.5847,95.9163,1.4631
+Qwen/Qwen3-1.7B,Q8_0,2160.0624,109.0589,2.3647
+Qwen/Qwen3-1.7B,Q4_K_M,2028.9776,153.6875,1.4756
+Qwen/Qwen3-1.7B,Q3_K_M,1975.3123,123.7645,1.2807
+Qwen/Qwen3-4B,Q8_0,758.9896,49.9797,4.497
+Qwen/Qwen3-4B,Q4_K_M,544.4883,72.9602,2.7277
+Qwen/Qwen3-4B,Q3_K_M,735.7886,56.2762,2.3052

@@ -1,0 +1,16 @@
+Copyright (c) 2026 Chipsnug
+
+The data and documentation in this repository (data/, koqloss-public.md,
+README.md) are licensed under the Creative Commons Attribution 4.0
+International License (CC BY 4.0), except as noted below.
+
+  https://creativecommons.org/licenses/by/4.0/
+  Full legal code: https://creativecommons.org/licenses/by/4.0/legalcode
+
+Attribution: "Chipsnug koqloss v0.1.0, https://github.com/chipsnug/koqloss"
+
+Exception: the fields of data/inputs.json under "q1_kl_document" (sentence
+IDs, document hashes and byte counts, and the rule for building the document)
+are derived from FLORES-101, which is licensed under CC BY-SA 4.0. Those fields
+are also offered under CC BY-SA 4.0 and must be shared under the same terms.
+See THIRD_PARTY_NOTICES.md.

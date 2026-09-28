@@ -1,0 +1,13 @@
+name: Question
+description: Ask about the method, the data or how to read the results.
+labels: ["question"]
+body:
+  - type: markdown
+    attributes:
+      value: "**Public issue: do not include confidential information, personal data or contact details.** / 공개 이슈입니다. 기밀·개인정보·연락처를 적지 마세요."
+  - type: textarea
+    id: question
+    attributes:
+      label: Question / 질문
+    validations:
+      required: true

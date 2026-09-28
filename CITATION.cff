@@ -1,0 +1,16 @@
+cff-version: 1.2.0
+message: "If you use these results, please cite them as below."
+title: "Chipsnug koqloss: Korean vs English quantization loss"
+type: dataset
+authors:
+  - name: Chipsnug
+version: 0.1.2
+date-released: "2026-09-28"
+license: CC-BY-4.0
+repository-code: "https://github.com/chipsnug/koqloss"
+url: "https://huggingface.co/datasets/chipsnug/ko-quant-loss-v0"
+keywords:
+  - quantization
+  - gguf
+  - korean
+  - kl-divergence

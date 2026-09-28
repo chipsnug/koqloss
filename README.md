@@ -32,9 +32,13 @@ Q8_0 is the reference, not BF16. One device, one session, 300 sentences (FLORES-
 - Repository code (the release workflow): MIT ([`LICENSE`](LICENSE)).
 - No model weights, logits or FLORES-101 text are included.
 
+## Request a measurement
+
+Want a chip, device, model or quantization level measured with this protocol? Open a [measurement request](https://github.com/chipsnug/koqloss/issues/new?template=measurement-request.yml). Requests are counted to decide what to measure next. There is no promise of a reply, price or schedule. Issues are public, so do not include confidential information, personal data or contact details. To cite this work, see [`CITATION.cff`](CITATION.cff).
+
 ## Contact
 
-hello@chipsnug.com · Updates: <https://chipsnug.com/?utm_source=gh-release&utm_medium=tool&utm_campaign=koqloss-v0.1.1>
+hello@chipsnug.com · Updates: <https://chipsnug.com/?utm_source=gh-release&utm_medium=tool&utm_campaign=koqloss-v0.1.2>
 
 ---
 
@@ -68,6 +72,10 @@ hello@chipsnug.com · Updates: <https://chipsnug.com/?utm_source=gh-release&utm_
 - 저장소 코드(릴리스 워크플로): MIT(`LICENSE`).
 - 모델 가중치·로짓·FLORES-101 원문은 넣지 않았다.
 
+## 측정 요청
+
+이 규약으로 재 주었으면 하는 칩·기기·모델·양자화 수준이 있으면 [측정 요청](https://github.com/chipsnug/koqloss/issues/new?template=measurement-request.yml)을 남겨 주세요. 요청은 다음 측정 대상을 정하는 데 집계합니다. 응답·가격·일정은 약속하지 않습니다. 이슈는 공개되므로 회사 기밀·개인정보·연락처는 적지 마세요. 인용할 때는 `CITATION.cff`를 참고하세요.
+
 ## 연락
 
-hello@chipsnug.com · 소식 받기: <https://chipsnug.com/?utm_source=gh-release&utm_medium=tool&utm_campaign=koqloss-v0.1.1>
+hello@chipsnug.com · 소식 받기: <https://chipsnug.com/?utm_source=gh-release&utm_medium=tool&utm_campaign=koqloss-v0.1.2>

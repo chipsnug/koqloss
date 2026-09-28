@@ -1,7 +1,7 @@
 {
  "license": "SPDX-License-Identifier: CC-BY-4.0 · Copyright (c) 2026 Chipsnug · fields under inputs.q1_kl_document are derived from FLORES-101 and also follow CC-BY-SA-4.0",
  "source": "https://github.com/chipsnug/koqloss",
- "version": "v0.1.1",
+ "version": "v0.1.2",
  "summary": {
   "schema": "koqloss-summary/1",
   "reference": "Q8_0",

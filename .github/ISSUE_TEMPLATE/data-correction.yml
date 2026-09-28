@@ -1,0 +1,20 @@
+name: Data correction
+description: Report a number, hash or statement that looks wrong.
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: "**Public issue: do not include confidential information, personal data or contact details.** / 공개 이슈입니다. 기밀·개인정보·연락처를 적지 마세요."
+  - type: input
+    id: where
+    attributes:
+      label: File and row or section / 파일과 행·절
+      placeholder: "e.g. data/kl.csv, Qwen/Qwen3-4B Q4_K_M"
+    validations:
+      required: true
+  - type: textarea
+    id: what
+    attributes:
+      label: What looks wrong and why / 무엇이 왜 틀려 보이나요
+    validations:
+      required: true

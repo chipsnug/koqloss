@@ -1,0 +1,50 @@
+name: Measurement request
+description: Ask for a chip, device, model or quantization level to be measured with this protocol.
+title: "[request] "
+labels: ["enhancement"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        **This is a public issue. Do not include confidential company information, personal data or contact details.**
+        Requests are counted to decide what to measure next. There is no promise of a reply, price or schedule.
+        이 이슈는 공개됩니다. 회사 기밀·개인정보·연락처를 적지 마세요. 요청은 다음 측정 대상을 정하는 데 집계하며, 응답·가격·일정을 약속하지 않습니다.
+  - type: dropdown
+    id: requester
+    attributes:
+      label: Requester type / 요청자 유형
+      options:
+        - Chip vendor / 칩 회사
+        - Device maker (OEM) / 기기 제조사
+        - App or product team / 앱·제품 개발팀
+        - Research / 연구
+        - Individual / 개인
+        - Prefer not to say / 밝히지 않음
+    validations:
+      required: true
+  - type: input
+    id: target
+    attributes:
+      label: Chip or device / 칩·기기
+      placeholder: "e.g. a phone SoC, a laptop GPU, an NPU"
+  - type: input
+    id: model
+    attributes:
+      label: Model and quantization / 모델·양자화
+      placeholder: "e.g. a public GGUF repo and levels (Q4_K_M, Q3_K_M)"
+  - type: textarea
+    id: use
+    attributes:
+      label: What would you use the result for? / 결과를 어디에 쓰나요?
+  - type: dropdown
+    id: budget
+    attributes:
+      label: Budget for measurement (optional) / 측정 예산(선택)
+      options:
+        - None / 없음
+        - Not decided / 미정
+        - Under USD 1,000 / 100만 원 미만
+        - USD 1,000–10,000 / 100만~1,000만 원
+        - Over USD 10,000 / 1,000만 원 이상
+    validations:
+      required: false

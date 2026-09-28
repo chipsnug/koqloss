@@ -23,7 +23,7 @@ configs:
   data_files: data/models.csv
 ---
 
-# Chipsnug koqloss (v0.1.1)
+# Chipsnug koqloss (v0.1.2)
 
 This dataset measures how much more information Korean loses than English when an open model is quantized, using the same content in both languages. It is a mirror of the result tables in <https://github.com/chipsnug/koqloss>. The full report, in English and then Korean, is in `koqloss-public.md`.
 
@@ -59,7 +59,7 @@ Q8_0 is the reference, not BF16. One device, one session, 300 sentences, 300 ite
 
 ## Contact
 
-hello@chipsnug.com · Updates: <https://chipsnug.com/?utm_source=hf-dataset&utm_medium=tool&utm_campaign=koqloss-v0.1.1>
+hello@chipsnug.com · Updates: <https://chipsnug.com/?utm_source=hf-dataset&utm_medium=tool&utm_campaign=koqloss-v0.1.2>
 
 ## 한국어
 

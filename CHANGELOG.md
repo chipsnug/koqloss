@@ -1,5 +1,13 @@
 # Changelog
 
+## v0.1.2 (2026-09-28)
+
+Repository additions only. Results and data files are unchanged.
+
+- Issue forms: measurement request (requester type, target, optional budget range), question, data correction. Every form asks for no confidential information, personal data or contact details. Requests carry no promise of a reply, price or schedule.
+- `CITATION.cff`.
+- Release asset: `koqloss-data-v0.1.2.json` and its `.sha256`.
+
 ## v0.1.1 (2026-09-28)
 
 Wording fixes only. The numbers and data files are unchanged. Only the release bundle name changes.

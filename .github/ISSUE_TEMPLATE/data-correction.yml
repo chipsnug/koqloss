@@ -1,6 +1,6 @@
 name: Data correction
 description: Report a number, hash or statement that looks wrong.
-labels: ["bug"]
+labels: ["topic:correction"]
 body:
   - type: markdown
     attributes:

@@ -1,7 +1,7 @@
 name: Measurement request
 description: Ask for a chip, device, model or quantization level to be measured with this protocol.
 title: "[request] "
-labels: ["enhancement"]
+labels: ["topic:request"]
 body:
   - type: markdown
     attributes:

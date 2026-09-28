@@ -256,6 +256,84 @@
    ],
    "perTokenAboveOne": true,
    "perByteRatio": 2.2744
+  },
+  {
+   "model": "skt/A.X-4.0-Light",
+   "quant": "Q4_K_M",
+   "meanKld": {
+    "ko": 0.023746,
+    "en": 0.018016
+   },
+   "meanKldUnc": {
+    "ko": 0.000822,
+    "en": 0.000431
+   },
+   "tokens": {
+    "ko": 8282,
+    "en": 8930
+   },
+   "scoredTokens": {
+    "ko": 4080,
+    "en": 4335
+   },
+   "chunks": {
+    "ko": 16,
+    "en": 17
+   },
+   "docRatio": 1.2224,
+   "ci": [
+    1.0835,
+    1.3943
+   ],
+   "ciMethod": "chunk-bootstrap",
+   "includesOne": false,
+   "tokenRatio": 0.9274,
+   "perTokenRatio": 1.3181,
+   "perTokenCi": [
+    1.1683,
+    1.5034
+   ],
+   "perTokenAboveOne": true,
+   "perByteRatio": 1.0092
+  },
+  {
+   "model": "skt/A.X-4.0-Light",
+   "quant": "Q3_K_M",
+   "meanKld": {
+    "ko": 0.074241,
+    "en": 0.063305
+   },
+   "meanKldUnc": {
+    "ko": 0.001737,
+    "en": 0.001511
+   },
+   "tokens": {
+    "ko": 8282,
+    "en": 8930
+   },
+   "scoredTokens": {
+    "ko": 4080,
+    "en": 4335
+   },
+   "chunks": {
+    "ko": 16,
+    "en": 17
+   },
+   "docRatio": 1.0877,
+   "ci": [
+    0.9715,
+    1.2328
+   ],
+   "ciMethod": "chunk-bootstrap",
+   "includesOne": true,
+   "tokenRatio": 0.9274,
+   "perTokenRatio": 1.1728,
+   "perTokenCi": [
+    1.0475,
+    1.3293
+   ],
+   "perTokenAboveOne": true,
+   "perByteRatio": 0.8979
   }
  ],
  "mc": [
@@ -420,6 +498,60 @@
    },
    "excluded": false,
    "includesZero": true
+  },
+  {
+   "model": "skt/A.X-4.0-Light",
+   "quant": "Q4_K_M",
+   "q8Accuracy": {
+    "ko": 0.6066666666666667,
+    "en": 0.7066666666666667
+   },
+   "accuracy": {
+    "ko": 0.5866666666666667,
+    "en": 0.7233333333333334
+   },
+   "flip": {
+    "ko": 0.07142857142857142,
+    "en": 0.02830188679245283
+   },
+   "netDrop": {
+    "ko": 0.02,
+    "en": -0.016666666666666666
+   },
+   "flipDiff": {
+    "mean": 0.0431,
+    "lo": 0.002,
+    "hi": 0.0872
+   },
+   "excluded": false,
+   "includesZero": false
+  },
+  {
+   "model": "skt/A.X-4.0-Light",
+   "quant": "Q3_K_M",
+   "q8Accuracy": {
+    "ko": 0.6066666666666667,
+    "en": 0.7066666666666667
+   },
+   "accuracy": {
+    "ko": 0.6,
+    "en": 0.6633333333333333
+   },
+   "flip": {
+    "ko": 0.07692307692307693,
+    "en": 0.09433962264150944
+   },
+   "netDrop": {
+    "ko": 0.006666666666666667,
+    "en": 0.043333333333333335
+   },
+   "flipDiff": {
+    "mean": -0.0174,
+    "lo": -0.0685,
+    "hi": 0.0377
+   },
+   "excluded": false,
+   "includesZero": true
   }
  ],
  "speed": [
@@ -485,6 +617,125 @@
    "ppTps": 735.7886,
    "tgTps": 56.2762,
    "benchMaxRssGB": 2.3052
+  },
+  {
+   "model": "skt/A.X-4.0-Light",
+   "quant": "Q8_0",
+   "ppTps": 404.0528,
+   "tgTps": 28.1037,
+   "benchMaxRssGB": 7.8791
+  },
+  {
+   "model": "skt/A.X-4.0-Light",
+   "quant": "Q4_K_M",
+   "ppTps": 436.3196,
+   "tgTps": 46.2044,
+   "benchMaxRssGB": 4.5958
+  },
+  {
+   "model": "skt/A.X-4.0-Light",
+   "quant": "Q3_K_M",
+   "ppTps": 422.4645,
+   "tgTps": 34.3881,
+   "benchMaxRssGB": 3.7442
+  }
+ ],
+ "cost": [
+  {
+   "model": "kakaocorp/kanana-1.5-2.1b-instruct-2505",
+   "quant": "Q8_0",
+   "measureMinutes": 1.2849,
+   "benchIncluded": false,
+   "fileGB": 2.4698,
+   "downloadMinutes": null
+  },
+  {
+   "model": "kakaocorp/kanana-1.5-2.1b-instruct-2505",
+   "quant": "Q4_K_M",
+   "measureMinutes": 1.309,
+   "benchIncluded": false,
+   "fileGB": 1.5228,
+   "downloadMinutes": null
+  },
+  {
+   "model": "kakaocorp/kanana-1.5-2.1b-instruct-2505",
+   "quant": "Q3_K_M",
+   "measureMinutes": 1.3693,
+   "benchIncluded": false,
+   "fileGB": 1.2462,
+   "downloadMinutes": null
+  },
+  {
+   "model": "Qwen/Qwen3-1.7B",
+   "quant": "Q8_0",
+   "measureMinutes": 1.1063,
+   "benchIncluded": false,
+   "fileGB": 2.165,
+   "downloadMinutes": null
+  },
+  {
+   "model": "Qwen/Qwen3-1.7B",
+   "quant": "Q4_K_M",
+   "measureMinutes": 1.0882,
+   "benchIncluded": false,
+   "fileGB": 1.2824,
+   "downloadMinutes": null
+  },
+  {
+   "model": "Qwen/Qwen3-1.7B",
+   "quant": "Q3_K_M",
+   "measureMinutes": 1.1142,
+   "benchIncluded": false,
+   "fileGB": 1.0732,
+   "downloadMinutes": null
+  },
+  {
+   "model": "Qwen/Qwen3-4B",
+   "quant": "Q8_0",
+   "measureMinutes": 2.5174,
+   "benchIncluded": false,
+   "fileGB": 4.2804,
+   "downloadMinutes": null
+  },
+  {
+   "model": "Qwen/Qwen3-4B",
+   "quant": "Q4_K_M",
+   "measureMinutes": 2.5573,
+   "benchIncluded": false,
+   "fileGB": 2.4973,
+   "downloadMinutes": null
+  },
+  {
+   "model": "Qwen/Qwen3-4B",
+   "quant": "Q3_K_M",
+   "measureMinutes": 2.6417,
+   "benchIncluded": false,
+   "fileGB": 2.0756,
+   "downloadMinutes": null
+  },
+  {
+   "model": "skt/A.X-4.0-Light",
+   "quant": "Q8_0",
+   "measureMinutes": 3.9393,
+   "benchIncluded": true,
+   "fileGB": 7.7192,
+   "downloadMinutes": 8.5016
+  },
+  {
+   "model": "skt/A.X-4.0-Light",
+   "quant": "Q4_K_M",
+   "measureMinutes": 3.7561,
+   "benchIncluded": true,
+   "fileGB": 4.4358,
+   "downloadMinutes": 4.5276
+  },
+  {
+   "model": "skt/A.X-4.0-Light",
+   "quant": "Q3_K_M",
+   "measureMinutes": 3.9187,
+   "benchIncluded": true,
+   "fileGB": 3.5848,
+   "downloadMinutes": 5.6019
   }
  ]
 }

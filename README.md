@@ -2,8 +2,8 @@
 
 How much more information Korean loses than English when an open model is quantized, measured on the same content.
 
-- **What it measures:** KL divergence of Q4_K_M and Q3_K_M against Q8_0 on parallel Korean/English text, paired multiple-choice flip rates, and speed/memory. 3 models × 3 GGUF levels, llama.cpp on one Apple M4 Pro.
-- **Main result (v0.1.1):** for the same content, Korean loses 1.47–3.45× more than English (6/6 combinations). Per token, kanana-1.5-2.1b-instruct shows no detectable extra loss (95% CI 0.84–1.14), so within this precision its gap is explained by token count (1.53×). Qwen3 adds 1.42–2.04× per token.
+- **What it measures:** KL divergence of Q4_K_M and Q3_K_M against Q8_0 on parallel Korean/English text, paired multiple-choice flip rates, speed/memory, and time and size per combination. 4 models × 3 GGUF levels, llama.cpp on one Apple M4 Pro.
+- **Main result (v0.2.0):** for the same content, Korean loses 1.09–3.45× more than English; the 95% interval is above 1.0 in 7 of 8 combinations. Per token, kanana-1.5-2.1b-instruct shows no detectable extra loss (95% CI 0.84–1.14), while the second Korean-focused model, A.X-4.0-Light, does (1.17–1.32×), which rejects the hypothesis that Korean-focused models have no per-token gap. A.X still has the smallest user-facing gap because its tokenizer needs fewer Korean tokens (0.93×). Qwen3 adds 1.42–2.04× per token.
 - **Full report:** [`koqloss-public.md`](koqloss-public.md) (English, then Korean).
 
 ## Data
@@ -12,6 +12,7 @@ How much more information Korean loses than English when an open model is quanti
 |---|---|
 | `data/kl.csv` | Q1: KO/EN per-document, per-token and per-byte KL ratios with 95% intervals |
 | `data/mc.csv` | Q2: accuracy, flip rate and KO−EN flip gap with 95% intervals |
+| `data/cost.csv` | Time and size per combination (measurement minutes, file GB, download minutes where recorded) |
 | `data/speed.csv` | Q3: prompt/generation tokens per second, max RSS |
 | `data/models.csv` | GGUF repos, files, sizes and SHA-256 (weights not included) |
 | `data/inputs.json` | Input IDs, build rules and SHA-256 (no source text) |
@@ -38,7 +39,7 @@ Want a chip, device, model or quantization level measured with this protocol? Op
 
 ## Contact
 
-hello@chipsnug.com · Updates: <https://chipsnug.com/?utm_source=gh-release&utm_medium=tool&utm_campaign=koqloss-v0.1.2>
+hello@chipsnug.com · Updates: <https://chipsnug.com/?utm_source=gh-release&utm_medium=tool&utm_campaign=koqloss-v0.2.0>
 
 ---
 
@@ -46,8 +47,8 @@ hello@chipsnug.com · Updates: <https://chipsnug.com/?utm_source=gh-release&utm_
 
 같은 내용을 두고, 공개 모델을 양자화했을 때 한국어가 영어보다 정보를 얼마나 더 잃는지 쟀다.
 
-- **무엇을 재나:** 세 가지를 잰다. 첫째, 한·영 병렬 텍스트에서 Q8_0 대비 Q4_K_M·Q3_K_M의 KL 발산. 둘째, 문항 쌍 다지선다 전환율. 셋째, 속도·메모리. 모델 3개 × GGUF 3수준이고, Apple M4 Pro 1대에서 llama.cpp로 쟀다.
-- **결과(v0.1.1):** 같은 내용이면 한국어가 영어보다 1.47~3.45배 더 잃는다(6/6 조합). 토큰당으로 보면 kanana-1.5-2.1b-instruct는 검출할 만한 추가 손실이 없다(95% 구간 0.84~1.14). 이 정밀도 안에서 kanana의 격차는 토큰 수(1.53배)로 설명된다. Qwen3은 토큰당으로도 1.42~2.04배를 더 잃는다.
+- **무엇을 재나:** 한·영 병렬 텍스트에서 Q8_0 대비 Q4_K_M·Q3_K_M의 KL 발산, 문항 쌍 다지선다 전환율, 속도·메모리, 조합당 측정 시간·용량을 잰다. 모델 4개 × GGUF 3수준이고, Apple M4 Pro 1대에서 llama.cpp로 쟀다.
+- **결과(v0.2.0):** 같은 내용이면 한국어가 영어보다 1.09~3.45배 더 잃는다(8조합 중 7조합에서 95% 구간이 1.0 초과). 토큰당으로 보면 kanana-1.5-2.1b-instruct는 검출할 만한 추가 손실이 없지만(95% 구간 0.84~1.14), 두 번째 한국어 중심 모델 A.X-4.0-Light는 있다(1.17~1.32배). 그래서 "한국어 중심 모델은 토큰당 격차가 없다"는 가설은 기각이다. 그래도 A.X는 토크나이저가 한국어를 적게 쪼개서(0.93배) 사용자가 겪는 격차가 가장 작다. Qwen3은 토큰당 1.42~2.04배를 더 잃는다.
 - **전체 보고서:** [`koqloss-public.md`](koqloss-public.md)(영어 다음 한국어).
 
 ## 데이터
@@ -78,4 +79,4 @@ hello@chipsnug.com · Updates: <https://chipsnug.com/?utm_source=gh-release&utm_
 
 ## 연락
 
-hello@chipsnug.com · 소식 받기: <https://chipsnug.com/?utm_source=gh-release&utm_medium=tool&utm_campaign=koqloss-v0.1.2>
+hello@chipsnug.com · 소식 받기: <https://chipsnug.com/?utm_source=gh-release&utm_medium=tool&utm_campaign=koqloss-v0.2.0>

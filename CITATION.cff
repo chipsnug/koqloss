@@ -4,7 +4,7 @@ title: "Chipsnug koqloss: Korean vs English quantization loss"
 type: dataset
 authors:
   - name: Chipsnug
-version: 0.1.2
+version: 0.2.0
 date-released: "2026-09-28"
 license: CC-BY-4.0
 repository-code: "https://github.com/chipsnug/koqloss"

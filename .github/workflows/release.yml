@@ -21,6 +21,18 @@ jobs:
         run: gh release create "$GITHUB_REF_NAME" "dist/koqloss-data-${GITHUB_REF_NAME}.json" "dist/koqloss-data-${GITHUB_REF_NAME}.json.sha256" --title "$GITHUB_REF_NAME" --notes-file "$RUNNER_TEMP/notes.md" --verify-tag
         env:
           GH_TOKEN: ${{ github.token }}
+  labels:
+    runs-on: ubuntu-latest
+    permissions:
+      issues: write
+    steps:
+      - name: Ensure issue-form labels exist
+        run: |
+          gh label create "topic:request" --repo "$GITHUB_REPOSITORY" --color 1d76db --description "Measurement request" --force
+          gh label create "topic:question" --repo "$GITHUB_REPOSITORY" --color 5319e7 --description "Question about method or data" --force
+          gh label create "topic:correction" --repo "$GITHUB_REPOSITORY" --color d93f0b --description "Data correction" --force
+        env:
+          GH_TOKEN: ${{ github.token }}
   hf:
     needs: release
     runs-on: ubuntu-latest

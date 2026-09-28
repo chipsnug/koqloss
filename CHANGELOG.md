@@ -1,5 +1,14 @@
 # Changelog
 
+## v0.2.0 (2026-09-28)
+
+- New model: skt/A.X-4.0-Light (GGUF from mykor/A.X-4.0-Light-gguf), measured with the same inputs (checked by SHA-256), settings and llama.cpp build.
+- Pre-registered test of "Korean-focused models have no per-token gap": **rejected**. A.X-4.0-Light's per-token KO/EN ratio is 1.32 (1.17–1.50) at Q4_K_M and 1.17 (1.05–1.33) at Q3_K_M.
+- Headline updated: Korean loses 1.09–3.45× more than English for the same content; the 95% interval is above 1.0 in 7 of 8 combinations (was 6/6). A.X-4.0-Light has the smallest user-facing gap because its tokenizer needs 0.93× as many Korean tokens.
+- New `data/cost.csv`: measurement time and file size per combination (download time for A.X-4.0-Light). `data/inputs.json` now also lists the SHA-256 of the multiple-choice input binaries.
+- Issue-form labels are now `topic:request`, `topic:question` and `topic:correction`; the release workflow creates them.
+- Release asset: `koqloss-data-v0.2.0.json` and its `.sha256`.
+
 ## v0.1.2 (2026-09-28)
 
 Repository additions only. Results and data files are unchanged.

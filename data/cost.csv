@@ -1,0 +1,13 @@
+model,quant,measure_minutes,bench_included,file_gb,download_minutes,note
+kakaocorp/kanana-1.5-2.1b-instruct-2505,Q8_0,1.2849,false,2.4698,,
+kakaocorp/kanana-1.5-2.1b-instruct-2505,Q4_K_M,1.309,false,1.5228,,
+kakaocorp/kanana-1.5-2.1b-instruct-2505,Q3_K_M,1.3693,false,1.2462,,
+Qwen/Qwen3-1.7B,Q8_0,1.1063,false,2.165,,
+Qwen/Qwen3-1.7B,Q4_K_M,1.0882,false,1.2824,,
+Qwen/Qwen3-1.7B,Q3_K_M,1.1142,false,1.0732,,
+Qwen/Qwen3-4B,Q8_0,2.5174,false,4.2804,,
+Qwen/Qwen3-4B,Q4_K_M,2.5573,false,2.4973,,
+Qwen/Qwen3-4B,Q3_K_M,2.6417,false,2.0756,,
+skt/A.X-4.0-Light,Q8_0,3.9393,true,7.7192,8.5016,download time overlapped with other CPU work; possibly inflated
+skt/A.X-4.0-Light,Q4_K_M,3.7561,true,4.4358,4.5276,
+skt/A.X-4.0-Light,Q3_K_M,3.9187,true,3.5848,5.6019,

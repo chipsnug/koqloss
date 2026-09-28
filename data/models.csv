@@ -8,3 +8,6 @@ Qwen/Qwen3-4B,bartowski/Qwen_Qwen3-4B-GGUF,bartowski,Q3_K_M,Qwen_Qwen3-4B-Q3_K_M
 Qwen/Qwen3-1.7B,bartowski/Qwen_Qwen3-1.7B-GGUF,bartowski,Q8_0,Qwen_Qwen3-1.7B-Q8_0.gguf,2165039520,74bb7c53538ab2cc81b93f0c64da14a503159de68cff3c6770428d3850479db3,apache-2.0,false
 Qwen/Qwen3-1.7B,bartowski/Qwen_Qwen3-1.7B-GGUF,bartowski,Q4_K_M,Qwen_Qwen3-1.7B-Q4_K_M.gguf,1282439584,72c5c3cb38fa32d5256e2fe30d03e7a64c6c79e668ad84057e3bd66e250b24fb,apache-2.0,false
 Qwen/Qwen3-1.7B,bartowski/Qwen_Qwen3-1.7B-GGUF,bartowski,Q3_K_M,Qwen_Qwen3-1.7B-Q3_K_M.gguf,1073242528,d544d30dbb7b2f608775d69c939a9b8d89c45df2be1a5ad1390ddc1bd7f8d6f5,apache-2.0,false
+skt/A.X-4.0-Light,mykor/A.X-4.0-Light-gguf,mykor,Q8_0,A.X-4.0-Light-Q8_0.gguf,7719171648,2a45b095ea5e63426f13a7ad88c9b9b253fccfea67847d245340338d40d2dcea,apache-2.0,false
+skt/A.X-4.0-Light,mykor/A.X-4.0-Light-gguf,mykor,Q4_K_M,A.X-4.0-Light-Q4_K_M.gguf,4435826240,6bd9cb8ccaae2efc5c33c7b5e443c2f820d4731130df38cd24f7ba494146ead5,apache-2.0,false
+skt/A.X-4.0-Light,mykor/A.X-4.0-Light-gguf,mykor,Q3_K_M,A.X-4.0-Light-Q3_K_M.gguf,3584783936,b51eb32bc20ef88c1b774e7ef074b328a7cbb0ca8075e32eb80785c6cc814712,apache-2.0,false

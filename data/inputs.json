@@ -38,6 +38,11 @@
    "license": "mit"
   },
   "pairing": "row position i in openai/MMMLU KO_KR test = row position i in cais/mmlu all test (the MMMLU 'Unnamed: 0' column is not the row position)",
+  "binary_sha256": {
+   "ko": "86caafb4e04019a1016e40e93f92788e77abc6493c81cc9c1311c71487fb70b9",
+   "en": "a488dccd560fdd67d3dc0c9fc5d5d32e65a5b8ad021ff640e61ab64ec4db170b"
+  },
+  "binary_format": "llama.cpp --multiple-choice binary, one task per item in the order above",
   "sampled": 300,
   "seed": 20260927,
   "pairs": 300,

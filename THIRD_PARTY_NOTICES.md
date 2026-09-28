@@ -27,6 +27,7 @@ This repository contains **no text, questions or model weights** from the source
 | Base model | GGUF files from | Base license |
 |---|---|---|
 | kakaocorp/kanana-1.5-2.1b-instruct-2505 | DevQuasar/kakaocorp.kanana-1.5-2.1b-instruct-2505-GGUF | Apache-2.0 |
+| skt/A.X-4.0-Light | mykor/A.X-4.0-Light-gguf | Apache-2.0 |
 | Qwen/Qwen3-1.7B | bartowski/Qwen_Qwen3-1.7B-GGUF | Apache-2.0 |
 | Qwen/Qwen3-4B | bartowski/Qwen_Qwen3-4B-GGUF | Apache-2.0 |
 
